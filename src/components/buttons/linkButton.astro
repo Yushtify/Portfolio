@@ -10,7 +10,6 @@ interface Props {
 
     givenLocationFrom?: "horizontal" | "vertical";
     givenLocation?: "start" | "center" | "end";
-    titleHiddenWhen?: "xs" | "sm" | "md" | "lg" | "xl";
 
     givenTitle?: string;
     givenTitleData?: string;
@@ -21,7 +20,6 @@ const {
     givenSymbol,
     givenLocationFrom,
     givenLocation,
-    titleHiddenWhen,
     givenTitle,
     givenTitleData,
 } = Astro.props;
@@ -46,26 +44,18 @@ const borderRadius =
         : "rounded-3xl";
 const validBorderRadius = `${borderRadius} hover:rounded-3xl`;
 
-const titleHiddenWhenMap: any = {
-    xs: "xs:inline",
-    sm: "sm:inline",
-    md: "md:inline",
-    lg: "lg:inline",
-    xl: "xl:inline",
-};
-const validTitleHiddenWhen = titleHiddenWhen
-    ? titleHiddenWhenMap[titleHiddenWhen]
-    : "md:inline";
 const textSize = "text-[min(6vw,1rem)]";
-const validPadding = givenTitle
-    ? `p-3 md:p-4 ${validTitleHiddenWhen}:px-5`
-    : "p-3 md:p-4 aspect-square";
-const hasTitle = givenTitle ? "hidden" : "hidden!";
+const validPadding = givenTitle ? `p-2` : "p-2 aspect-square";
+const hasTitle = givenTitle ? "" : "!hidden";
 const linkClassRepeated = `group flex flex-row flex-stretch items-center justify-center gap-2 ${validPadding} ${validBorderRadius} w-fit h-full font-bold text-[min(6vw,1.2rem)] transition-all duration-250 ease-in-out capitalize`;
 const classMap = {
     linkClass: `${linkClassRepeated} bg-L_Primary dark:bg-D_Primary hover:bg-Accent text-LT_Primary dark:text-DT_Primary hover:text-LT_Inverted dark:hover:text-DT_Inverted`,
     activeLinkClass: `${linkClassRepeated} bg-Accent hover:bg-Highlight text-LT_Inverted dark:text-DT_Inverted `,
-    titleClass: `${validTitleHiddenWhen} ${textSize} ${hasTitle}`,
+    titleClass: `hidden md:inline mr-2 ${textSize} ${hasTitle}`,
+    symbolContainer:
+        "flex flex-row p-4 rounded-3xl bg-L_BG dark:bg-D_BG group-hover:bg-Highlight transition-colors duration-250 ease-in-out",
+    activeSymbolContainer:
+        "flex flex-row p-4 rounded-3xl bg-Highlight group-hover:bg-LightAccent transition-colors duration-250 ease-in-out",
 };
 ---
 
@@ -73,11 +63,19 @@ const classMap = {
     href={givenHref}
     class={isActive(givenHref) ? classMap.activeLinkClass : classMap.linkClass}
 >
-    <MaterialSymbol
-        givenMaterialSymbol={givenSymbol}
-        givenMaterialSymbolSize={textSize}
-        isFilled={isActive(givenHref) ? true : false}
-    />
+    <div
+        class={
+            isActive(givenHref)
+                ? classMap.activeSymbolContainer
+                : classMap.symbolContainer
+        }
+    >
+        <MaterialSymbol
+            givenMaterialSymbol={givenSymbol}
+            givenMaterialSymbolSize={textSize}
+            isFilled={isActive(givenHref) ? true : false}
+        />
+    </div>
     <p data-i18n={givenTitleData} class={classMap.titleClass}>
         {givenTitle}
     </p>

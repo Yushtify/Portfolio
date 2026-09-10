@@ -1,10 +1,29 @@
 ---
+import Button from "../../buttons/button.astro";
+import LinkButton from "../../buttons/linkButton.astro";
 import GridDecoration from "./grid.astro";
 ---
 
-<div class="relative flex flex-col items-center justify-center w-full h-screen p-8 rounded-3xl bg-radial from-Accent/12 to:bg-L_BG dark:to:bg-D_BG capitalize z-1">
-    <div class="flex flex-col items-center justify-center w-full h-fit gap-2 font-semibold text-[min(6vw,12rem)] text-Accent">
-        <p data-i18n="home.hero.slogan.first">UI & UX Designer</p>
+<div class="relative flex flex-col items-center justify-center w-full h-screen pt-64 p-0 md:p-12 gap-8 rounded-3xl capitalize">
+    <div class="flex flex-col items-center justify-center gap-8 sm:gap-12 w-full h-fit z-1">
+        <div class="flex flex-col items-center justify-center w-full h-fit gap-2 font-semibold text-[min(6vw,12rem)] text-Accent">
+            <p data-i18n="home.hero.slogan.first">Yushtify</p>
+        </div>
+        <p
+            data-i18n="home.hero.slogan.first"
+            class="w-full md:w-[60%] xl:w-[40%] text-[min(6vw,1.2rem)] text-LT_Secondary dark:text-DT_Secondary text-center line-clamp-2 sm:line-clamp-none"
+        >
+            Hey! I'm Yushtify, a UI & UX Designer and a FrontEnd Engineer with
+            over 2+ years of experience on Modern, Responsive and fluent web
+            designs. Working with Astro, TailwindCSS and Typescript.
+        </p>
     </div>
-    <GridDecoration />
+    <div class="flex flex-col md:flex-row items-center justify-center gap-4 w-full h-fit z-1">
+        <Button givenFunction="" givenSymbol="work" givenTitle="Hire Me" />
+        <Button
+            givenFunction=""
+            givenSymbol="alternate_email"
+            givenTitle="contact me"
+        />
+    </div>
 </div>
