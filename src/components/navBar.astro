@@ -1,0 +1,180 @@
+---
+import ExpandButton from "./buttons/expandButton.astro";
+import LinkButton from "./buttons/linkButton.astro";
+---
+
+<div
+    id="NavBar"
+    class="fixed top-0 left-0 flex flex-col items-center justify-center p-4 w-fit sm:w-full h-fit overflow-hidden z-999"
+>
+    <div class="flex flex-row items-center justify-between gap-2 p-2 w-full rounded-3xl bg-L_Primary/48 dark:bg-D_Primary/48 backdrop-blur-3xl">
+        <div
+            id="start"
+            class="flex flex-row items-center justify-start w-fit h-fit gap-2"
+        >
+            <a
+                href="/"
+                class="group flex flex-row items-center justify-center gap-3 p-2 pr-2 md:pr-6 rounded-3xl w-fit max-h-full h-full hover:bg-Accent transition-color duration-250 ease-in-out overflow-hidden"
+            >
+                <img
+                    src="/logo.png"
+                    alt="YUSHTIFY PROFILE PHOTO"
+                    class="h-full w-10 rounded-3xl aspect-square border-2 border-transparent group-hover:border-LB_Inverted dark:border-DB_Inverted transition-color duration-250 ease-in-out"
+                />
+                <div class="flex flex-col items-start justify-center">
+                    <p class="font-bold text-[min(6vw,0.9rem)]">Yushtify</p>
+                    <p class="text-[min(6vw,0.7rem)] text-LT_Secondary dark:text-DT_Secondary">
+                        Portfolio
+                    </p>
+                </div>
+            </a>
+            <div class="sm:hidden flex flex-row items-center justify-center w-fit h-fit mr-2">
+                <ExpandButton
+                    givenButtonID="NavBarToggle_Button"
+                    givenFunction="toggleNavbar()"
+                    givenSymbol="keyboard_arrow_right"
+                />
+            </div>
+        </div>
+        <div
+            id="center"
+            class="hidden sm:flex flex-row items-start justify-start w-fit h-fit gap-2"
+        >
+            <LinkButton
+                givenLocationFrom="horizontal"
+                givenLocation="start"
+                titleHiddenWhen="lg"
+                givenHref="/"
+                givenSymbol="home_app_logo"
+                givenTitle="home"
+            />
+            <LinkButton
+                givenLocationFrom="horizontal"
+                givenLocation="center"
+                titleHiddenWhen="lg"
+                givenHref="/projects"
+                givenSymbol="deployed_code"
+                givenTitle="projects"
+            />
+            <LinkButton
+                givenLocationFrom="horizontal"
+                givenLocation="center"
+                titleHiddenWhen="lg"
+                givenHref="/about"
+                givenSymbol="info"
+                givenTitle="about"
+            />
+            <LinkButton
+                givenLocationFrom="horizontal"
+                givenLocation="end"
+                titleHiddenWhen="lg"
+                givenHref="/contact"
+                givenSymbol="support_agent"
+                givenTitle="contact"
+            />
+        </div>
+        <div
+            id="end"
+            class="hidden sm:flex flex-row items-start justify-start w-fit h-fit gap-2"
+        >
+            <LinkButton givenHref="/404" givenSymbol="settings" />
+        </div>
+    </div>
+</div>
+
+<script>
+    interface NavBarButton_Config {
+        ID: string;
+        symbols: {
+            active: string;
+            deactive: string;
+        };
+    }
+
+    interface IDs {
+        navigationBar: string;
+        start: string;
+        center: string;
+        end: string;
+        NavBarToggle_Button: NavBarButton_Config;
+        MaterialSymbolID: string;
+    }
+    const ElementIDS: IDs = {
+        navigationBar: "NavBar",
+        start: "#start",
+        center: "#center",
+        end: "#end",
+        NavBarToggle_Button: {
+            ID: "NavBarToggle_Button",
+            symbols: {
+                active: "keyboard_arrow_left",
+                deactive: "keyboard_arrow_right",
+            },
+        },
+        MaterialSymbolID: "#MaterialSymbol",
+    };
+
+    // ------------ Toggle NavBar Function ------------
+    (window as any).toggleNavbar = function () {
+        if (!ElementIDS)
+            return console.error(
+                "[toggleNavbar Function]: couldn't find EkementIDS table.",
+            );
+
+        // initilize NavBar
+        const NavBar = document.getElementById(
+            ElementIDS.navigationBar,
+        ) as HTMLDivElement;
+        if (!NavBar)
+            return console.warn(
+                "[toggleNavbar Function]: couldn't find NavBar on document.",
+            );
+
+        // if NavBar valid initilize contianer
+        const NavBar_Start = NavBar.querySelector(
+            ElementIDS.start,
+        ) as HTMLDivElement;
+        const NavBar_Center = NavBar.querySelector(
+            ElementIDS.center,
+        ) as HTMLDivElement;
+        const NavBar_End = NavBar.querySelector(
+            ElementIDS.end,
+        ) as HTMLDivElement;
+
+        // initilize toggle button
+        const NavbarToggleButton = document.getElementById(
+            ElementIDS.NavBarToggle_Button.ID,
+        ) as HTMLButtonElement;
+        const ButtonSymbol = NavbarToggleButton.querySelector(
+            ElementIDS.MaterialSymbolID,
+        ) as HTMLSpanElement;
+
+        // check validity
+        if (
+            !NavBar_Center &&
+            !NavBar_End &&
+            !NavbarToggleButton &&
+            !ButtonSymbol
+        )
+            return console.warn(
+                "[toggleNavbar Function]: couldn't find NavBar elements on document.",
+            );
+
+        if (
+            NavBar_Center.classList.contains("hidden") &&
+            NavBar_End.classList.contains("hidden")
+        ) {
+            NavBar.classList.replace("w-fit", "w-full");
+            NavBar_Center.classList.replace("hidden", "flex");
+            NavBar_End.classList.replace("hidden", "flex");
+            ButtonSymbol.textContent =
+                ElementIDS.NavBarToggle_Button.symbols.active;
+        } else {
+            NavBar.classList.replace("w-full", "w-fit");
+            NavBar_Center.classList.replace("flex", "hidden");
+            NavBar_End.classList.replace("flex", "hidden");
+            ButtonSymbol.textContent =
+                ElementIDS.NavBarToggle_Button.symbols.deactive;
+        }
+    };
+</script>

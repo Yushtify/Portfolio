@@ -1,0 +1,31 @@
+---
+interface Props {
+    givenID?: string;
+    givenMaterialSymbol?: string;
+    givenCustomStyle?: string;
+    givenMaterialSymbolSize?: string;
+    isFilled?: boolean;
+}
+const {
+    givenID,
+    givenMaterialSymbol,
+    givenCustomStyle,
+    isFilled,
+    givenMaterialSymbolSize,
+} = Astro.props;
+
+const isActive = givenMaterialSymbol ? "inline" : "!hidden";
+const ValidIsFilled = isFilled ? "icon-fill" : "";
+const ValidSize = givenMaterialSymbolSize
+    ? `!${givenMaterialSymbolSize}`
+    : "!text-[min(6vw,0.9rem)]";
+const ValidID = givenID ? givenID : "MaterialSymbol";
+---
+
+<span
+    translate="no"
+    id={ValidID}
+    class={`select-none material-symbols-rounded group-hover:icon-fill ${givenCustomStyle} ${ValidIsFilled} ${ValidSize} ${isActive}`}
+>
+    {givenMaterialSymbol}
+</span>

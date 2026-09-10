@@ -1,0 +1,27 @@
+---
+import MaterialSymbol from "../materialSymbol.astro";
+
+const currentPath = Astro.url.pathname;
+const isActive = (path: string) => currentPath === path;
+
+interface Props {
+    givenButtonID: string;
+    givenFunction: string;
+    givenSymbol?: string;
+}
+
+const { givenButtonID, givenFunction, givenSymbol } = Astro.props;
+
+const textSize = "text-[min(6vw,1rem)]";
+const classMap = {
+    button: "flex flex-row items-center justify-center p-1 rounded-3xl hover:bg-L_Accent hover:bg-Accent text-LT_Primary dark:text-DT_Primary hover:text-LT_Inverted dark:hover:text-DT_Inverted transition-colors duration-250 ease-in-out",
+};
+---
+
+<button id={givenButtonID} onclick={givenFunction} class={classMap.button}>
+    <MaterialSymbol
+        givenMaterialSymbol={givenSymbol}
+        givenMaterialSymbolSize={textSize}
+        isFilled={true}
+    />
+</button>

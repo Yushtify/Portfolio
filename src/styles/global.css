@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+    /* Buraya yazdıklarının hepsi senin custom variable, mesela renk font gibi */
+    --font-Sans: "Poppins", sans-serif;
+    --font-Serif: "Lora", serif;
+    --font-Mono: "Jetbrains Mono", monospace;
+
+    /* --- DARK MODE --- */
+    --color-D_BG: #000000;
+    --color-D_Primary: #101010;
+    --color-D_Secondary: #181818;
+    --color-D_Tertiary: #202020;
+    --color-D_Quaternary: #282828;
+
+    --color-D_Primary_Hover: #151515;
+    --color-D_Secondary_Hover: #1d1d1d;
+    --color-D_Tertiary_Hover: #262626;
+    --color-D_Quaternary_Hover: #303030;
+
+    --color-DT_Primary: #ffffff;
+    --color-DT_Secondary: #d9d9d9;
+    --color-DT_Tertiary: #a7a7a7;
+    --color-DT_Inverted: #000000;
+
+    --color-DB_Primary: #303030;
+    --color-DB_Secondary: #363636;
+    --color-DB_Tertiary: #3e3e3e;
+    --color-DB_Inverted: #cecece;
+
+    /* --- LIGHT MODE --- */
+    --color-L_BG: #ffffff;
+    --color-L_Primary: #f4f4f4;
+    --color-L_Secondary: #e6e6e6;
+    --color-L_Tertiary: #d9d9d9;
+    --color-L_Quaternary: #cecece;
+
+    --color-L_Primary_Hover: #ffffff;
+    --color-L_Secondary_Hover: #f2f2f2;
+    --color-L_Tertiary_Hover: #e6e6e6;
+    --color-L_Quaternary_Hover: #dadada;
+
+    --color-LT_Primary: #000000;
+    --color-LT_Secondary: #353535;
+    --color-LT_Tertiary: #4b4b4b;
+    --color-LT_Inverted: #ffffff;
+
+    --color-LB_Primary: #cecece;
+    --color-LB_Secondary: #c0c0c0;
+    --color-LB_Tertiary: #a9a9a9;
+    --color-LB_Inverted: #323232;
+
+    /* --- SHARED COLORS --- */
+    --color-Accent: #8478fd;
+    --color-LightAccent: #bab3ff;
+    --color-Highlight: #9489fd;
+}
+
+@layer base {
+    .material-symbols-rounded {
+        font-family: "Material Symbols Rounded";
+        display: inline-block;
+        line-height: 1;
+        color: currentColor;
+
+        font-variation-settings:
+            "FILL" 0,
+            "wght" 400,
+            "GRAD" 0,
+            "opsz" 24;
+
+        width: 1em;
+        height: 1em;
+    }
+}
+
+@layer utilities {
+    .reduce-motion *,
+    .reduce-motion *::before,
+    .reduce-motion *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+
+    /* Custom Scrollbar */
+    .custom-scrollbar {
+        /* For Firefox */
+        scrollbar-width: thin;
+        scrollbar-color: rgba(132, 120, 253, 0.4) transparent;
+    }
+
+    /* For Webkit (Chrome, Safari, Edge) */
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 4px; /* Minimal width */
+        height: 4px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: rgba(132, 120, 253, 0.5);
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(132, 120, 253, 1);
+    }
+
+    /* İkon Doldurma Yardımcısı */
+    .icon-fill,
+    .hover\:icon-fill:hover {
+        font-variation-settings: "FILL" 1 !important;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
