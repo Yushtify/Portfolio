@@ -47,11 +47,11 @@ const validBorderRadius = `${borderRadius} hover:rounded-3xl`;
 const textSize = "text-[min(6vw,1rem)]";
 const validPadding = givenTitle ? `p-2` : "p-2 aspect-square";
 const hasTitle = givenTitle ? "" : "!hidden";
-const linkClassRepeated = `group flex flex-row flex-stretch items-center justify-center gap-2 ${validPadding} ${validBorderRadius} w-fit h-full font-bold text-[min(6vw,1.2rem)] transition-all duration-250 ease-in-out capitalize`;
+const linkClassRepeated = `group flex flex-row flex-stretch items-center justify-center gap-4 ${validPadding} ${validBorderRadius} w-fit h-full font-bold text-[min(6vw,1.2rem)] transition-all duration-250 ease-in-out capitalize`;
 const classMap = {
     linkClass: `${linkClassRepeated} bg-L_Primary dark:bg-D_Primary hover:bg-Accent text-LT_Primary dark:text-DT_Primary hover:text-LT_Inverted dark:hover:text-DT_Inverted`,
     activeLinkClass: `${linkClassRepeated} bg-Accent hover:bg-Highlight text-LT_Inverted dark:text-DT_Inverted `,
-    titleClass: `hidden md:inline mr-2 ${textSize} ${hasTitle}`,
+    titleClass: `hidden lg:inline mr-4 ${textSize} ${hasTitle}`,
     symbolContainer:
         "flex flex-row p-4 rounded-3xl bg-L_BG dark:bg-D_BG group-hover:bg-Highlight transition-colors duration-250 ease-in-out",
     activeSymbolContainer:
