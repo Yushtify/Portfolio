@@ -1,0 +1,17 @@
+---
+interface Props {
+    givenLinkGroupName: string;
+}
+
+const { givenLinkGroupName } = Astro.props;
+---
+
+<!-- Link Group -->
+<div class="flex flex-col items-center justify-center gap-4">
+    <p class="font-semibold text-[min(6vw,1rem)] text-LT_Secondary dark:text-DT_Secondary uppercase">
+        {givenLinkGroupName}
+    </p>
+    <div class="flex flex-col items-center justify-center gap-2">
+        <slot />
+    </div>
+</div>

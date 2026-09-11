@@ -1,0 +1,24 @@
+---
+import LinkGroups from "./linkGroups.astro";
+---
+
+<footer class="flex flex-col items-center justify-center gap-8 p-12 w-full h-fit bg-L_Primary dark:bg-D_Primary">
+    <div class="flex flex-row items-center justify-center gap-4 p-2 pr-4">
+        <img
+            src="../../public/logo.png"
+            alt="YUSHTIFY PROFILE PHOTO"
+            class="w-16 rounded-3xl border-2 border-LB_Inverted dark:border-DB_Inverted"
+        />
+        <div class="flex flex-col items-start justify-center gap-1">
+            <p class="font-bold text-[min(6vw,0.9rem)]">Yushtify</p>
+            <p class="text-[min(6vw,0.7rem)] text-LT_Secondary dark:text-DT_Secondary">
+                Portfolio
+            </p>
+        </div>
+    </div>
+
+    <!-- Links -->
+    <div class="flex flex-row items-center justify-center gap-4 p-2">
+        <LinkGroups givenLinkGroupName="Socials" />
+    </div>
+</footer>
