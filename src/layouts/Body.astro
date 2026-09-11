@@ -4,6 +4,7 @@ import "../styles/global.css";
 
 // Needed Companents.
 import NavBar from "../components/navBar.astro";
+import Footer from "../components/footer/index.astro";
 ---
 
 <!doctype html>
@@ -24,8 +25,9 @@ import NavBar from "../components/navBar.astro";
     <body class="relative flex flex-col items-start justify-start gap-4 bg-L_BG dark:bg-D_BG text-[min(6vw,0.9rem)] text-LT_Primary dark:text-DT_Primary caret-Accent selection:text-Accent selection:bg-Accent/36">
         <NavBar />
         <!-- Main Content -->
-        <div class="flex flex-col items-start justify-start gap-4 p-4 w-full min-h-screen h-fit">
+        <main class="flex flex-col items-start justify-start gap-4 p-4 w-full min-h-screen h-fit">
             <slot />
-        </div>
+        </main>
+        <Footer />
     </body>
 </html>
