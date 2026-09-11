@@ -1,0 +1,131 @@
+---
+import MaterialSymbol from "../materialSymbol.astro";
+import SvgSymbol from "../svgSymbol.astro";
+
+interface Props {
+    givenLocationFrom?: "horizontal" | "vertical";
+    givenLocation?: "start" | "center" | "end";
+
+    givenSvgSymbol?: string;
+    givenSvgSymbolSize?: string;
+    givenSvgSymbolViewBox?: string;
+    givenMaterialSymbol?: string;
+
+    givenCustomHoverColor?: string;
+    givenCustomHoverHighlightColor?: string;
+
+    givenTitle: string;
+    givenTitleData: string;
+    givenDesc: string;
+    givenDescData: string;
+}
+const {
+    givenLocationFrom,
+    givenLocation,
+    givenSvgSymbol,
+    givenSvgSymbolSize,
+    givenSvgSymbolViewBox,
+    givenMaterialSymbol,
+    givenCustomHoverColor,
+    givenCustomHoverHighlightColor,
+    givenTitle,
+    givenTitleData,
+    givenDesc,
+    givenDescData,
+} = Astro.props;
+
+const colorClassMap = {
+    Accent: {
+        hoverBg: "hover:bg-Accent",
+        hoverShadow: "hover:shadow-Accent/48",
+        groupHoverBg: "group-hover:bg-Accent",
+    },
+    Highlight: {
+        hoverBg: "hover:bg-Highlight",
+        hoverShadow: "hover:shadow-Highlight/48",
+        groupHoverBg: "group-hover:bg-Highlight",
+    },
+} as const;
+
+const isHex = (value?: string) => !!value && value.startsWith("#");
+
+const hoverColorIsHex = isHex(givenCustomHoverColor);
+const hoverHighlightIsHex = isHex(givenCustomHoverHighlightColor);
+
+const validHoverColor = hoverColorIsHex
+    ? null
+    : (colorClassMap[givenCustomHoverColor as keyof typeof colorClassMap] ??
+      colorClassMap.Accent);
+const validHoverHighlightColor = hoverHighlightIsHex
+    ? null
+    : (colorClassMap[
+          givenCustomHoverHighlightColor as keyof typeof colorClassMap
+      ] ?? colorClassMap.Highlight);
+
+const hoverColorClass = hoverColorIsHex
+    ? "hover:bg-[var(--hover-color)] hover:shadow-[var(--hover-color)]/48"
+    : `${validHoverColor!.hoverBg} ${validHoverColor!.hoverShadow}`;
+const hoverHighlightColorClass = hoverHighlightIsHex
+    ? "group-hover:bg-[var(--hover-highlight-color)]"
+    : validHoverHighlightColor!.groupHoverBg;
+
+const customColorStyle = `${
+    hoverColorIsHex ? `--hover-color: ${givenCustomHoverColor};` : ""
+}${
+    hoverHighlightIsHex
+        ? `--hover-highlight-color: ${givenCustomHoverHighlightColor};`
+        : ""
+}`;
+
+// validate button rounded
+const borderRadiusMap = {
+    horizontal: {
+        start: "rounded-xl rounded-l-3xl",
+        center: "rounded-xl",
+        end: "rounded-xl rounded-r-3xl",
+    },
+    vertical: {
+        start: "rounded-xl rounded-t-3xl",
+        center: "rounded-xl",
+        end: "rounded-xl rounded-b-3xl",
+    },
+} as const;
+
+const borderRadius =
+    givenLocationFrom && givenLocation
+        ? borderRadiusMap[givenLocationFrom][givenLocation]
+        : "rounded-3xl";
+const validBorderRadius = `${borderRadius} hover:rounded-3xl`;
+const textSize = "text-[min(6vw,1.2rem)]";
+---
+
+<div
+    class={`group flex flex-col items-start justify-start min-w-fit w-full min-h-fit h-full p-4 pr-6 md:p-8 md:pr-10 gap-4 ${validBorderRadius} bg-L_Primary dark:bg-D_Primary  hover:text-LT_Inverted dark:hover:text-DT_Inverted ${hoverColorClass} shadow-2xl shadow-transparent transition-colors duration-250 ease-in-out`}
+    style={customColorStyle}
+>
+    <div class="flex flex-row items-center justify-start gap-4">
+        <div
+            class={`flex flex-row items-center justify-center p-4 rounded-3xl bg-L_BG dark:bg-D_BG ${hoverHighlightColorClass} transition-colors duration-250 ease-in-out`}
+        >
+            <SvgSymbol
+                givenSvgSymbol={givenSvgSymbol}
+                givenSvgSymbolSize={givenSvgSymbolSize}
+                givenViewBox={givenSvgSymbolViewBox}
+            />
+            <MaterialSymbol
+                givenMaterialSymbol={givenMaterialSymbol}
+                givenMaterialSymbolSize={`!${textSize}`}
+                isFilled={true}
+            />
+        </div>
+        <p
+            data-i18n={givenTitleData}
+            class="text-[min(6vw,1.2rem)] font-semibold capitalize"
+        >
+            {givenTitle}
+        </p>
+    </div>
+    <p class="text-LT_Secondary dark:text-DT_Secondary group-hover:text-LT_Inverted dark:group-hover:text-DT_Inverted transition-colors duration-250 ease-in-out">
+        {givenDesc}
+    </p>
+</div>

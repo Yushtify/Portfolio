@@ -1,0 +1,31 @@
+---
+import Button from "../../buttons/button.astro";
+---
+
+<div class="relative flex flex-col items-center justify-start md:justify-center w-full min-h-screen h-fit p-0 md:p-12 md:pb-48 gap-8 rounded-3xl capitalize">
+    <div class="flex flex-col items-center justify-center gap-8 sm:gap-12 w-full h-fit z-1">
+        <div class="flex flex-col items-center justify-center w-full h-fit gap-2 font-semibold text-[min(8vw,12rem)] text-Accent">
+            <p data-i18n="home.hero.slogan.first">Yushtify</p>
+        </div>
+        <p
+            data-i18n="home.hero.slogan.first"
+            class="w-full md:w-[60%] xl:w-[40%] text-[min(6vw,1.2rem)] text-LT_Secondary dark:text-DT_Secondary text-center"
+        >
+            Hey! I'm Yushtify, a UI & UX Designer and a FrontEnd Engineer with
+            over 2+ years of experience on Modern, Responsive and fluent web
+            designs. Working with Astro, TailwindCSS and Typescript.
+        </p>
+    </div>
+    <div class="flex flex-col md:flex-row items-center justify-center gap-4 w-full h-fit z-1">
+        <Button
+            givenFunction=""
+            givenMaterialSymbol="work"
+            givenTitle="Hire Me"
+        />
+        <Button
+            givenFunction=""
+            givenMaterialSymbol="alternate_email"
+            givenTitle="contact me"
+        />
+    </div>
+</div>
