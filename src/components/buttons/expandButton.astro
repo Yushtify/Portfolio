@@ -7,10 +7,10 @@ const isActive = (path: string) => currentPath === path;
 interface Props {
     givenButtonID: string;
     givenFunction: string;
-    givenSymbol?: string;
+    givenMaterialSymbol?: string;
 }
 
-const { givenButtonID, givenFunction, givenSymbol } = Astro.props;
+const { givenButtonID, givenFunction, givenMaterialSymbol } = Astro.props;
 
 const textSize = "text-[min(6vw,1rem)]";
 const classMap = {
@@ -20,7 +20,7 @@ const classMap = {
 
 <button id={givenButtonID} onclick={givenFunction} class={classMap.button}>
     <MaterialSymbol
-        givenMaterialSymbol={givenSymbol}
+        givenMaterialSymbol={givenMaterialSymbol}
         givenMaterialSymbolSize={textSize}
         isFilled={true}
     />

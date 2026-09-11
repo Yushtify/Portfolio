@@ -6,7 +6,7 @@ const isActive = (path: string) => currentPath === path;
 
 interface Props {
     givenHref: string;
-    givenSymbol?: string;
+    givenMaterialSymbol?: string;
 
     givenLocationFrom?: "horizontal" | "vertical";
     givenLocation?: "start" | "center" | "end";
@@ -17,7 +17,7 @@ interface Props {
 
 const {
     givenHref,
-    givenSymbol,
+    givenMaterialSymbol,
     givenLocationFrom,
     givenLocation,
     givenTitle,
@@ -71,7 +71,7 @@ const classMap = {
         }
     >
         <MaterialSymbol
-            givenMaterialSymbol={givenSymbol}
+            givenMaterialSymbol={givenMaterialSymbol}
             givenMaterialSymbolSize={textSize}
             isFilled={isActive(givenHref) ? true : false}
         />

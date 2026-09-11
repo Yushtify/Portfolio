@@ -6,7 +6,7 @@ const isActive = (path: string) => currentPath === path;
 
 interface Props {
     givenFunction: string;
-    givenSymbol?: string;
+    givenMaterialSymbol?: string;
 
     givenLocationFrom?: "horizontal" | "vertical";
     givenLocation?: "start" | "center" | "end";
@@ -17,7 +17,7 @@ interface Props {
 
 const {
     givenFunction,
-    givenSymbol,
+    givenMaterialSymbol,
     givenLocationFrom,
     givenLocation,
     givenTitle,
@@ -55,7 +55,7 @@ const classMap = {
 <button onclick={givenFunction} class={classMap.button}>
     <div class="flex flex-row p-4 rounded-3xl bg-L_BG dark:bg-D_BG group-hover:bg-Highlight transition-colors duration-250 ease-in-out">
         <MaterialSymbol
-            givenMaterialSymbol={givenSymbol}
+            givenMaterialSymbol={givenMaterialSymbol}
             givenMaterialSymbolSize={textSize}
             isFilled={true}
         />
