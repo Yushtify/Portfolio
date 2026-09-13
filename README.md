@@ -16,6 +16,8 @@
 
 This is an open source portfolio, u can use it as a template for your own portfolio or visit the live version at <a href="https://www.yushtify-portfolio.netlify.app/">Yushtify-Portfolio</a>
 
+The portfolio is built using Astro, TypeScript, and Tailwind CSS. With component-first and Mobile First approach, the portfolio is designed to be responsive and accessible on all devices.
+
 ---
 
 ## ⚖️ License
