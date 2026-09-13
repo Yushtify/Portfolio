@@ -12,7 +12,7 @@ interface Props {
     givenLocation?: "start" | "center" | "end";
 
     givenTitle?: string;
-    givenTitleData?: string;
+    givenTitleKey?: string;
 }
 
 const {
@@ -21,7 +21,7 @@ const {
     givenLocationFrom,
     givenLocation,
     givenTitle,
-    givenTitleData,
+    givenTitleKey,
 } = Astro.props;
 
 // validate button rounded
@@ -60,7 +60,7 @@ const classMap = {
             isFilled={true}
         />
     </div>
-    <p data-i18n={givenTitleData} class={classMap.titleClass}>
+    <p data-i18n={givenTitleKey} class={classMap.titleClass}>
         {givenTitle}
     </p>
 </button>

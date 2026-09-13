@@ -8,24 +8,24 @@
 
     /* --- DARK MODE --- */
     --color-D_BG: #000000;
-    --color-D_Primary: #101010;
-    --color-D_Secondary: #181818;
-    --color-D_Tertiary: #202020;
-    --color-D_Quaternary: #282828;
+    --color-D_Primary: #171717;
+    --color-D_Secondary: #1f1f1f;
+    --color-D_Tertiary: #2a2a2a;
+    --color-D_Quaternary: #313131;
 
-    --color-D_Primary_Hover: #151515;
-    --color-D_Secondary_Hover: #1d1d1d;
-    --color-D_Tertiary_Hover: #262626;
-    --color-D_Quaternary_Hover: #303030;
+    --color-D_Primary_Hover: #222222;
+    --color-D_Secondary_Hover: #282828;
+    --color-D_Tertiary_Hover: #2f2f2f;
+    --color-D_Quaternary_Hover: #3a3a3a;
 
     --color-DT_Primary: #ffffff;
     --color-DT_Secondary: #e0e0e0;
     --color-DT_Tertiary: #868686;
     --color-DT_Inverted: #000000;
 
-    --color-DB_Primary: #303030;
-    --color-DB_Secondary: #8e8e8e;
-    --color-DB_Tertiary: #6b6b6b;
+    --color-DB_Primary: #323232;
+    --color-DB_Secondary: #383838;
+    --color-DB_Tertiary: #403f3f;
     --color-DB_Inverted: #cecece;
 
     /* --- LIGHT MODE --- */
@@ -75,6 +75,10 @@
 }
 
 @layer utilities {
+    .homeTitle {
+        @apply font-semibold text-[min(10vw,3rem)] text-LT_Primary dark:text-DT_Primary uppercase;
+    }
+
     .reduce-motion *,
     .reduce-motion *::before,
     .reduce-motion *::after {

@@ -1,0 +1,30 @@
+{
+  "navigationBar": {
+    "left": {},
+    "center": {
+      "linkButtons": {
+        "home": "Ana Sayfa",
+        "projects": "Projeler",
+        "about": "Hakkımda",
+        "contact": "İletişim"
+      }
+    },
+    "right": {}
+  },
+
+  "home": {
+    "hero": {
+      "info": {
+        "summary": "Merhaba! Ben Yushtify. Modern, duyarlı ve akıcı web tasarımları alanında 2 yılı aşkın deneyime sahip bir UI ve UX Tasarımcısı ve FrontEnd Mühendisiyim. Astro, TailwindCSS ve Typescript ile çalışıyorum."
+      },
+      "buttons": {
+        "hireMe": "Beni işe al",
+        "contactMe": "Bana ulaş"
+      }
+    },
+    "TIU": {
+      "title": "Kullandığım Araçlar",
+      "desc": "Kusursuz deneyimler sunarak sihirli anları mümkün kılan araçlar."
+    }
+  }
+}

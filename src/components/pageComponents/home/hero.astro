@@ -2,13 +2,13 @@
 import Button from "../../buttons/button.astro";
 ---
 
-<div class="relative flex flex-col items-center justify-start md:justify-center w-full min-h-screen h-fit p-0 md:p-12 md:pb-48 gap-8 rounded-3xl capitalize">
+<div class="relative flex flex-col items-center justify-start md:justify-center w-full min-h-screen h-fit p-0 md:p-12 md:pb-24 gap-8 rounded-3xl capitalize">
     <div class="flex flex-col items-center justify-center gap-8 sm:gap-12 w-full h-fit z-1">
         <div class="flex flex-col items-center justify-center w-full h-fit gap-2 font-semibold text-[min(8vw,12rem)] text-Accent">
-            <p data-i18n="home.hero.slogan.first">Yushtify</p>
+            <p>Yushtify</p>
         </div>
         <p
-            data-i18n="home.hero.slogan.first"
+            data-i18n="home.hero.info.summary"
             class="w-full md:w-[60%] xl:w-[40%] text-[min(6vw,1.2rem)] text-LT_Secondary dark:text-DT_Secondary text-center"
         >
             Hey! I'm Yushtify, a UI & UX Designer and a FrontEnd Engineer with
@@ -21,11 +21,13 @@ import Button from "../../buttons/button.astro";
             givenFunction=""
             givenMaterialSymbol="work"
             givenTitle="Hire Me"
+            givenTitleKey="home.hero.buttons.hireMe"
         />
         <Button
             givenFunction=""
             givenMaterialSymbol="alternate_email"
             givenTitle="contact me"
+            givenTitleKey="home.hero.buttons.contactMe"
         />
     </div>
 </div>

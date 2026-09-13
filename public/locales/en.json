@@ -1,0 +1,30 @@
+{
+  "navigationBar": {
+    "left": {},
+    "center": {
+      "linkButtons": {
+        "home": "Home",
+        "projects": "Projects",
+        "about": "About",
+        "contact": "Contact"
+      }
+    },
+    "right": {}
+  },
+
+  "home": {
+    "hero": {
+      "info": {
+        "summary": "Hey! I'm Yushtify, a UI & UX Designer and a FrontEnd Engineer with over 2+ years of experience on Modern, Responsive and fluent web designs. Working with Astro, TailwindCSS and Typescript."
+      },
+      "buttons": {
+        "hireMe": "Hire Me",
+        "contactMe": "Contact Me"
+      }
+    },
+    "TIU": {
+      "title": "tools i use",
+      "desc": "The Tools that make the magic happen with seemless experiences."
+    }
+  }
+}

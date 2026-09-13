@@ -1,9 +1,10 @@
 ---
 import LinkGroups from "./linkGroups.astro";
+import CustomLink from "../customLink.astro";
 ---
 
-<footer class="flex flex-col items-center justify-center gap-8 p-12 w-full h-fit bg-L_Primary dark:bg-D_Primary">
-    <div class="flex flex-row items-center justify-center gap-4 p-2 pr-4">
+<footer class="flex flex-col items-center justify-center gap-8 p-12 w-full h-fit bg-L_Primary dark:bg-D_Primary border-t border-t-LB_Primary dark:border-DB_Primary">
+    <div class="flex flex-row items-center justify-center gap-4 p-4 pr-6 rounded-3xl bg-L_BG dark:bg-D_BG border border-LB_Primary dark:border-DB_Primary">
         <img
             src="../../public/logo.png"
             alt="YUSHTIFY PROFILE PHOTO"
@@ -19,6 +20,8 @@ import LinkGroups from "./linkGroups.astro";
 
     <!-- Links -->
     <div class="flex flex-row items-center justify-center gap-4 p-2">
-        <LinkGroups givenLinkGroupName="Socials" />
+        <LinkGroups givenLinkGroupName="Socials">
+            <CustomLink givenHref="/" givenTitle="Instagram" givenTitleKey="" />
+        </LinkGroups>
     </div>
 </footer>

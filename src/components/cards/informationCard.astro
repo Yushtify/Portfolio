@@ -15,9 +15,9 @@ interface Props {
     givenCustomHoverHighlightColor?: string;
 
     givenTitle: string;
-    givenTitleData: string;
+    givenTitleKey: string;
     givenDesc: string;
-    givenDescData: string;
+    givenDescKey: string;
 }
 const {
     givenLocationFrom,
@@ -29,9 +29,9 @@ const {
     givenCustomHoverColor,
     givenCustomHoverHighlightColor,
     givenTitle,
-    givenTitleData,
+    givenTitleKey,
     givenDesc,
-    givenDescData,
+    givenDescKey,
 } = Astro.props;
 
 const colorClassMap = {
@@ -119,7 +119,7 @@ const textSize = "text-[min(6vw,1.2rem)]";
             />
         </div>
         <p
-            data-i18n={givenTitleData}
+            data-i18n={givenTitleKey}
             class="text-[min(6vw,1.2rem)] font-semibold capitalize"
         >
             {givenTitle}

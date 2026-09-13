@@ -1,0 +1,63 @@
+---
+import InfoChip from "../../cards/infoChip.astro";
+---
+
+<div class="flex flex-col lg:flex-row items-start justify-center gap-8 p-8 w-full h-fit">
+    <!-- Profile Photo -->
+    <div class="flex flex-col items-start justify-center w-full lg:w-fit h-fit gap-8">
+        <div class="relative flex flex-col items-center justify-center w-fit h-fit gap-8">
+            <img
+                src="/public/logo.png"
+                alt="YUSHTIFY PROFILE PHOTO"
+                class="chImage_BG absolute inset-0 z-0 w-full h-full object-cover blur-[48px] opacity-80 pointer-events-none select-none"
+            />
+            <img
+                src="/public/logo.png"
+                alt="YUSHTIFY PROFILE PHOTO"
+                class="w-48 rounded-3xl z-1"
+            />
+        </div>
+
+        <div class="flex flex-row flex-wrap lg:flex-col items-start justify-center gap-4 w-full h-fit">
+            <InfoChip
+                givenMaterialSymbol="business_center"
+                givenTitle="hire status"
+                givenTitleKey="home.biography.infoChips.status.title"
+                givenDesc="available"
+                givenDescKey="home.biography.infoChips.status.desc"
+            />
+            <InfoChip
+                givenMaterialSymbol="deployed_code_history"
+                givenTitle="experience"
+                givenTitleKey="home.biography.infoChips.experience.title"
+                givenDesc="2+ years"
+                givenDescKey="home.biography.infoChips.experience.desc"
+            />
+        </div>
+    </div>
+
+    <!-- Profile Info -->
+    <div class="flex flex-col items-start justify-center gap-4 w-fit h-fit text-[min(6vw,1rem)] text-LT_Secondary dark:text-DT_Secondary">
+        <p class="homeTitle">Who am I?</p>
+        <p class="w-full max-w-248 h-fit">Hey!</p>
+        <p class="w-full max-w-248 h-fit">
+            I'm Yushtify, Aka Bulut Bozkurt. I'm a web developer, specializing
+            in Frontend Development and Engineering. With over 2 year of
+            experience, with responsive and modern web technologies and
+            frameworks, I've worked on variety of projects, from a large scale
+            of an streaming website to small scale personal portfolio like this
+            one.
+        </p>
+        <p class="w-full max-w-248 h-fit">
+            Furthermore, currently I use Astro as my main framework combined
+            with TailwindCSS and TypeScript to build responsive, modern and user
+            friendly websites for everyone.
+        </p>
+        <p class="w-full max-w-248 h-fit">
+            I plan every move on projects, on Obsidian and Excalidraw. I use
+            Figma for prototyping and designing my projects. I'm also
+            experienced in Figma over 3 years with component styling and
+            prototyping designs.
+        </p>
+    </div>
+</div>
