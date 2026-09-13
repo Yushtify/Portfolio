@@ -1,46 +1,37 @@
-# Astro Starter Kit: Basics
+<h1 align="center">Yushtify Portfolio</h1>
 
-```sh
-npm create astro@latest -- --template basics
-```
+<p align="center">
+  An open source portfolio website for Yushtify aka me
+</p>
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+<p align="center">
+  <img src="https://img.shields.io/github/last-commit/Yushtify/portfolio?style=for-the-badge&logo=git&color=8aadf4&labelColor=303446&logoColor=ffffff" alt="Last Commit">
+  <img src="https://img.shields.io/github/stars/Yushtify/portfolio?style=for-the-badge&logo=github&color=eed49f&labelColor=303446&logoColor=ffffff" alt="Stars">
+  <img src="https://img.shields.io/github/repo-size/Yushtify/portfolio?style=for-the-badge&logo=files&color=a6da95&labelColor=303446&logoColor=ffffff" alt="Repository Size">
+</p>
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## About
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+This is an open source portfolio, u can use it as a template for your own portfolio or visit the live version at <a href="yushtify-portfolio.netlify.app/">Yushtify-Portfolio</a>
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+---
 
-## 🧞 Commands
+## ⚖️ License
 
-All commands are run from the root of the project, from a terminal:
+### 🇬🇧 English
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+This project is licensed under the **GNU AGPLv3**.
 
-## 👀 Want to learn more?
+This license ensures that YokaiVerse and any network-deployed modifications remain open source while preserving attribution to the original author.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+See the [LICENSE](./LICENSE.md) file for the complete license text.
+
+### 🇹🇷 Türkçe
+
+Bu proje **GNU AGPLv3** lisansı ile lisanslanmıştır.
+
+Bu lisans, YokaiVerse ve ağ üzerinden sunulan tüm değiştirilmiş sürümlerin açık kaynak kalmasını ve orijinal geliştiricinin adının korunmasını garanti eder.
+
+Detaylı bilgi için **LICENSE.md** dosyasına bakabilirsiniz.
