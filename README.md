@@ -14,7 +14,7 @@
 
 ## About
 
-This is an open source portfolio, u can use it as a template for your own portfolio or visit the live version at <a href="yushtify-portfolio.netlify.app/">Yushtify-Portfolio</a>
+This is an open source portfolio, u can use it as a template for your own portfolio or visit the live version at <a href="https://www.yushtify-portfolio.netlify.app/">Yushtify-Portfolio</a>
 
 ---
 
