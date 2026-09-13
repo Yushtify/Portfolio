@@ -25,6 +25,25 @@
     "TIU": {
       "title": "Kullandığım Araçlar",
       "desc": "Kusursuz deneyimler sunarak sihirli anları mümkün kılan araçlar."
+    },
+    "biography": {
+      "infoChips": {
+        "status": {
+          "title": "çalışma durumu",
+          "desc": "müsait"
+        },
+        "experience": {
+          "title": "deneyimim",
+          "desc": "2+ yıl"
+        }
+      },
+      "information": {
+        "title": "ben kimim?",
+        "paragraph_1": "Merhaba!",
+        "paragraph_2": "Ben Yushtify, yani Bulut Bozkurt. Frontend Geliştirme ve Mühendislik alanında uzmanlaşan bir Web Geliştiricisiyim. Modern web teknolojileri ve framework'leri kullanarak responsive ve modern web siteleri geliştirme konusunda iki yılı aşkın deneyime sahibim. Büyük ölçekli yayın platformlarından bunun gibi daha küçük kişisel portfolyo sitelerine kadar çeşitli projeler üzerinde çalıştım.",
+        "paragraph_3": "Şu anda TypeScript ile birlikte Astro'yu ana framework'üm olarak kullanıyor; herkes için erişilebilir, responsive, modern ve kullanıcı dostu web siteleri geliştiriyorum.",
+        "paragraph_4": "Projelerimin her aşamasını Obsidian ve Excalidraw kullanarak planlıyor ve organize ediyorum. Projelerimin prototiplerini ve tasarımlarını hazırlamak için Figma kullanıyorum. Ayrıca üç yılı aşkın süredir Figma kullanıyor; özellikle component tasarımı, stillendirme ve etkileşimli prototipleme konusunda deneyim sahibiyim."
+      }
     }
   }
 }

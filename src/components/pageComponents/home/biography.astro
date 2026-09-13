@@ -38,9 +38,19 @@ import InfoChip from "../../cards/infoChip.astro";
 
     <!-- Profile Info -->
     <div class="flex flex-col items-start justify-center gap-4 w-fit h-fit text-[min(6vw,1rem)] text-LT_Secondary dark:text-DT_Secondary">
-        <p class="homeTitle">Who am I?</p>
-        <p class="w-full max-w-248 h-fit">Hey!</p>
-        <p class="w-full max-w-248 h-fit">
+        <p data-i18n="home.biography.information.title" class="homeTitle">
+            Who am I?
+        </p>
+        <p
+            data-i18n="home.biography.information.paragraph_1"
+            class="w-full max-w-248 h-fit"
+        >
+            Hey!
+        </p>
+        <p
+            data-i18n="home.biography.information.paragraph_2"
+            class="w-full max-w-248 h-fit"
+        >
             I'm Yushtify, Aka Bulut Bozkurt. I'm a web developer, specializing
             in Frontend Development and Engineering. With over 2 year of
             experience, with responsive and modern web technologies and
@@ -48,12 +58,18 @@ import InfoChip from "../../cards/infoChip.astro";
             of an streaming website to small scale personal portfolio like this
             one.
         </p>
-        <p class="w-full max-w-248 h-fit">
+        <p
+            data-i18n="home.biography.information.paragraph_3"
+            class="w-full max-w-248 h-fit"
+        >
             Furthermore, currently I use Astro as my main framework combined
             with TailwindCSS and TypeScript to build responsive, modern and user
             friendly websites for everyone.
         </p>
-        <p class="w-full max-w-248 h-fit">
+        <p
+            data-i18n="home.biography.information.paragraph_4"
+            class="w-full max-w-248 h-fit"
+        >
             I plan every move on projects, on Obsidian and Excalidraw. I use
             Figma for prototyping and designing my projects. I'm also
             experienced in Figma over 3 years with component styling and

@@ -25,6 +25,25 @@
     "TIU": {
       "title": "tools i use",
       "desc": "The Tools that make the magic happen with seemless experiences."
+    },
+    "biography": {
+      "infoChips": {
+        "status": {
+          "title": "hire status",
+          "desc": "available"
+        },
+        "experience": {
+          "title": "experience",
+          "desc": "2+ years"
+        }
+      },
+      "information": {
+        "title": "who am i?",
+        "paragraph_1": "Hey!",
+        "paragraph_2": "I'm Yushtify, also known as Bulut Bozkurt. I'm a Web Developer specializing in Frontend Development and Engineering. With over two years of experience in building responsive and modern websites using contemporary web technologies and frameworks, I've worked on a variety of projects, ranging from large-scale streaming platforms to smaller personal portfolios like this one.",
+        "paragraph_3": "Currently, I use Astro as my primary framework alongside TypeScript to build responsive, modern, and user-friendly websites accessible to everyone.",
+        "paragraph_4": "I plan and organize every aspect of my projects using Obsidian and Excalidraw. I use Figma for prototyping and designing my projects, and I've been working with Figma for over three years, particularly in component design, styling, and interactive prototyping."
+      }
     }
   }
 }
