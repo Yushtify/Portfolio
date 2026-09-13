@@ -2,7 +2,7 @@
 import InfoChip from "../../cards/infoChip.astro";
 ---
 
-<div class="flex flex-col lg:flex-row items-start justify-center gap-8 p-8 w-full h-fit">
+<div class="flex flex-col lg:flex-row items-start justify-center gap-8 p-0 md:p-8 w-full h-fit">
     <!-- Profile Photo -->
     <div class="flex flex-col items-start justify-center w-full lg:w-fit h-fit gap-8">
         <div class="relative flex flex-col items-center justify-center w-fit h-fit gap-8">
@@ -37,7 +37,7 @@ import InfoChip from "../../cards/infoChip.astro";
     </div>
 
     <!-- Profile Info -->
-    <div class="flex flex-col items-start justify-center gap-4 w-fit h-fit text-[min(6vw,1rem)] text-LT_Secondary dark:text-DT_Secondary">
+    <div class="flex flex-col items-start justify-center gap-4 w-full lg:w-fit h-fit text-[min(6vw,1rem)] text-LT_Secondary dark:text-DT_Secondary">
         <p data-i18n="home.biography.information.title" class="homeTitle">
             Who am I?
         </p>
