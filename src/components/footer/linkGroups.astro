@@ -7,11 +7,11 @@ const { givenLinkGroupName } = Astro.props;
 ---
 
 <!-- Link Group -->
-<div class="flex flex-col items-center justify-center gap-4">
-    <p class="font-semibold text-[min(6vw,1rem)] text-LT_Secondary dark:text-DT_Secondary uppercase">
+<div class="flex flex-col items-start justify-center gap-4 lg:mx-auto w-fit h-fit">
+    <p class="font-semibold text-[min(6vw,1.2rem)] capitalize">
         {givenLinkGroupName}
     </p>
-    <div class="flex flex-col items-center justify-center gap-2">
+    <div class="flex flex-col items-start justify-center gap-2">
         <slot />
     </div>
 </div>

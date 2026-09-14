@@ -5,12 +5,13 @@ import LinkButton from "./buttons/linkButton.astro";
 
 <div
     id="NavBar"
-    class="sticky top-0 left-0 flex flex-col items-center justify-center p-4 w-fit sm:w-full h-fit overflow-hidden z-999"
+    class="sticky top-0 left-0 flex flex-col items-center justify-center p-4 w-fit sm:w-full h-fit transition-all duration-250 ease-in-out overflow-hidden z-999"
 >
-    <div class="flex flex-row flex-wrap items-center justify-between gap-2 p-2 w-full rounded-3xl bg-L_Primary/48 dark:bg-D_Primary/48 backdrop-blur-3xl">
+    <div class="flex flex-row flex-wrap md:grid md:grid-cols-[1fr_auto_1fr] items-start md:items-center max-md:justify-between gap-2 p-2 w-full rounded-3xl bg-L_Primary/48 dark:bg-D_Primary/48 backdrop-blur-3xl">
+        <!-- NavBar Left Buttons -->
         <div
             id="start"
-            class="flex flex-row items-center justify-start w-fit h-fit gap-2"
+            class="flex flex-row items-center justify-self-start w-fit h-fit gap-2"
         >
             <a
                 href="/"
@@ -36,9 +37,11 @@ import LinkButton from "./buttons/linkButton.astro";
                 />
             </div>
         </div>
+
+        <!-- NavBar Center Buttons -->
         <div
             id="center"
-            class="hidden sm:flex flex-row items-start justify-start w-fit h-fit gap-2"
+            class="hidden sm:flex flex-row items-start md:justify-self-center w-fit h-fit gap-2"
         >
             <LinkButton
                 givenLocationFrom="horizontal"
@@ -73,9 +76,11 @@ import LinkButton from "./buttons/linkButton.astro";
                 givenTitleKey="navigationBar.center.linkButtons.contact"
             />
         </div>
+
+        <!-- NavBar Right Buttons -->
         <div
             id="end"
-            class="hidden md:flex flex-row items-start justify-start w-fit h-fit gap-2"
+            class="hidden md:flex flex-row items-start justify-self-end w-fit h-fit gap-2"
         >
             <LinkButton givenHref="/404" givenMaterialSymbol="settings" />
         </div>
@@ -99,6 +104,19 @@ import LinkButton from "./buttons/linkButton.astro";
         NavBarToggle_Button: NavBarButton_Config;
         MaterialSymbolID: string;
     }
+
+    const AnimationConfig = {
+        spinLeft: {
+            name: "spinLeft",
+            duration: "250ms",
+            easing: "ease-in-out",
+        },
+        spinRight: {
+            name: "spinRight",
+            duration: "250ms",
+            easing: "ease-in-out",
+        },
+    };
     const ElementIDS: IDs = {
         navigationBar: "NavBar",
         start: "#start",
@@ -167,14 +185,12 @@ import LinkButton from "./buttons/linkButton.astro";
             NavBar.classList.replace("w-fit", "w-full");
             NavBar_Center.classList.replace("hidden", "flex");
             NavBar_End.classList.replace("hidden", "flex");
-            ButtonSymbol.textContent =
-                ElementIDS.NavBarToggle_Button.symbols.active;
+            ButtonSymbol.style.animation = `${AnimationConfig.spinLeft.name} ${AnimationConfig.spinLeft.duration} ${AnimationConfig.spinLeft.easing} forwards`;
         } else {
             NavBar.classList.replace("w-full", "w-fit");
             NavBar_Center.classList.replace("flex", "hidden");
             NavBar_End.classList.replace("flex", "hidden");
-            ButtonSymbol.textContent =
-                ElementIDS.NavBarToggle_Button.symbols.deactive;
+            ButtonSymbol.style.animation = `${AnimationConfig.spinRight.name} ${AnimationConfig.spinRight.duration} ${AnimationConfig.spinRight.easing} forwards`;
         }
     };
 </script>
