@@ -1,0 +1,15 @@
+---
+import VersionGroupTemplate from "./templates/versionGroupTemplate.astro";
+import VersionCommitTemplate from "./templates/versionCommitTemplate.astro";
+import CommitBarTemplate from "./templates/commitBarTemplate.astro";
+---
+
+<div
+    id="changelogContainer"
+    class="flex flex-col items-center justify-center gap-12 mt-8 px-0 md:px-16 lg:px-36 xl:px-68 w-full h-fit"
+>
+    <!-- Changelog's json files are located on the /versions/[Version] the names are like: v0-0-1.json or v0-0-2.json The version GroupTemplate will be displayed in here first then the version CommitTemplate inside the VersionGroupTemplate in following id: commitContainer and then The commitBarTemplate will be inside the VersionCommitTemplate in following id: committedChangesContainer both of those id's lead to an HTML div element -->
+    <VersionGroupTemplate />
+    <VersionCommitTemplate />
+    <CommitBarTemplate />
+</div>

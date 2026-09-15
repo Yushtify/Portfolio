@@ -1,0 +1,42 @@
+---
+import MaterialSymbol from "./materialSymbol.astro";
+import SvgSymbol from "./svgSymbol.astro";
+
+interface Props {
+    givenID: string;
+    givenHref: string;
+
+    givenMaterialSymbol?: string;
+    givenMaterialSymbolSize?: string;
+
+    givenSvgSymbol?: string;
+    givenSvgSymbolSize?: string;
+}
+const {
+    givenID,
+    givenHref,
+    givenMaterialSymbol,
+    givenMaterialSymbolSize,
+    givenSvgSymbol,
+    givenSvgSymbolSize,
+} = Astro.props;
+---
+
+<a
+    id={givenID}
+    href={givenHref}
+    class="flex flex-col items-center justify-center text-LT_Primary dark:text-DT_Primary hover:text-Accent transition-colors duration-250 ease-in-out cursor-pointer"
+>
+    {givenMaterialSymbol && (
+        <MaterialSymbol
+            givenMaterialSymbol={givenMaterialSymbol}
+            givenMaterialSymbolSize={givenMaterialSymbolSize}
+        />
+    )}
+    {givenSvgSymbol && (
+        <SvgSymbol
+            givenSvgSymbol={givenSvgSymbol}
+            givenSvgSymbolSize={givenSvgSymbolSize}
+        />
+    )}
+</a>

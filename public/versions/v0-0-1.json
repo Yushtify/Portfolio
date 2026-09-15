@@ -1,0 +1,695 @@
+[
+  {
+    "en": {
+      "progress": "In Progress",
+      "version": "V0.0.1",
+      "versionSummary": "The very beginning of a legend.",
+      "date": "15 September 2026",
+      "commits": [
+        {
+          "commitID": "",
+          "date": "15 September 2026",
+          "summary": "This is focuses on the \"/updates\" page..",
+          "content": {
+            "added": [
+              "\"/updates\" page, with a dynamic loading of commit history for the portfolio."
+            ],
+            "fixed": [],
+            "changed": ["Improved footer."],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "67d1bc0",
+          "date": "14 September 2026",
+          "summary": "Navigation bar and footer enhancements.",
+          "content": {
+            "added": [
+              "Link groups finally added to the footer.",
+              "Toggle animation for the navBar; spins the arrow icon on mobile."
+            ],
+            "fixed": [
+              "\"customLink.astro\"",
+              "Some visual bugs on the footer and navBar."
+            ],
+            "changed": ["Updated \".gitignore\" with a better version."],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "67d1bc0",
+          "date": "13 September 2026",
+          "summary": "Updated gitignore.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": ["Updated \".gitignore\" with a better version."],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "4db984e",
+          "date": "13 September 2026",
+          "summary": "Quick fix.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": ["Some random text in \"README.md\"."],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "cc9fa9a",
+          "date": "13 September 2026",
+          "summary": "Quick fix.",
+          "content": {
+            "added": [],
+            "fixed": [
+              "The README directed users to the wrong link when trying to visit the portfolio."
+            ],
+            "changed": [],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "ef56c31",
+          "date": "13 September 2026",
+          "summary": "README update.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": [
+              "Updated \"README.md\" to be specific to the portfolio instead of the generic Astro README."
+            ],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "ba92101",
+          "date": "13 September 2026",
+          "summary": "Quick fix.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": [
+              "404 page attempted to center itself on mobile but failed."
+            ],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "e1b913a",
+          "date": "13 September 2026",
+          "summary": "404 enhancement, added untracked changes.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": ["Entire \"404.astro\" page."],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "ca8d860",
+          "date": "13 September 2026",
+          "summary": "404 page enhancement; forgot to include untracked files previously.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": ["Some class names."],
+            "removed": ["\"empty.astro\""]
+          }
+        },
+        {
+          "commitID": "5ddd7db",
+          "date": "13 September 2026",
+          "summary": "Quick fix.",
+          "content": {
+            "added": [],
+            "fixed": [
+              "A bug where logo.png was not displayed on the footer and Biography."
+            ],
+            "changed": [],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "1256965",
+          "date": "13 September 2026",
+          "summary": "Committed untracked files.",
+          "content": {
+            "added": [
+              "Localized \"biography.astro\" to specific languages; currently only Turkish and English are supported."
+            ],
+            "fixed": [],
+            "changed": [],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "75b846e",
+          "date": "13 September 2026",
+          "summary": "Added dynamic localization support and finished Home page.",
+          "content": {
+            "added": [
+              "\"languageHandler.ts\" for dynamic localization support (for more info, check the file and repository).",
+              "Directory structure: \"/locales/[languageCode].json\".",
+              "\"biography.astro\" added to the Home page to display more information about me."
+            ],
+            "fixed": ["Some visual bugs."],
+            "changed": [
+              "Changed \"givenTitleData\" and \"givenDescData\" to \"givenTitleKey\" and \"givenDescKey\"."
+            ],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "886d384",
+          "date": "11 September 2026",
+          "summary": "Added untracked files (footer was originally supposed to be released in commit 13d2257).",
+          "content": {
+            "added": ["Footer"],
+            "fixed": [],
+            "changed": [],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "13d2257",
+          "date": "11 September 2026",
+          "summary": "Started working on footer and renamed some divs to main / footer...",
+          "content": {
+            "added": [],
+            "fixed": ["Text coloring."],
+            "changed": ["Main container element changed from <div> to <main>."],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "d9746a7",
+          "date": "11 September 2026",
+          "summary": "Added missing SVG.",
+          "content": {
+            "added": ["Hover animation for \"infoChip.astro\"."],
+            "fixed": ["\"infSection.astro\""],
+            "changed": [],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "4797d0e",
+          "date": "11 September 2026",
+          "summary": "Added missing SVG.",
+          "content": {
+            "added": ["Missing SVG for the TypeScript logo."],
+            "fixed": [],
+            "changed": [],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "d554058",
+          "date": "11 September 2026",
+          "summary": "Added untracked files to the repository.",
+          "content": {
+            "added": [
+              "\"infoChip.astro\"",
+              "Home additions: \"home/components\", \"hero.astro\", \"grid.astro\", \"infSection.astro\".",
+              "New <svg> component called \"svgSymbol.astro\", removing the limitation of Material Symbols to allow custom SVGs."
+            ],
+            "fixed": [],
+            "changed": [],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "3557093",
+          "date": "11 September 2026",
+          "summary": "Quick fix.",
+          "content": {
+            "added": [],
+            "fixed": ["Typo issues in file naming."],
+            "changed": [],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "542b313",
+          "date": "11 September 2026",
+          "summary": "404 page: removed profanity.",
+          "content": {
+            "added": ["Some text to the 404 page."],
+            "fixed": [],
+            "changed": [],
+            "removed": ["Profanity on the 404 page."]
+          }
+        },
+        {
+          "commitID": "7dbc8e7",
+          "date": "11 September 2026",
+          "summary": "Home page additions.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": [
+              "\"button.astro\" updated to support Material Icons.",
+              "Renamed \"givenSymbol\" to \"givenMaterialSymbol\" for future SVG additions."
+            ],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "4aefaef",
+          "date": "10 September 2026",
+          "summary": "Hero section improvements on the Home page.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": ["1 line in the hero section."],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "81fd518",
+          "date": "10 September 2026",
+          "summary": "Navigation enhancements.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": [
+              "A few styles on the navigation bar, \"linkButton.astro\", and body."
+            ],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "337f11b",
+          "date": "10 September 2026",
+          "summary": "Some visual improvements.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": ["Updated some styles in \"linkButton.astro\"."],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "33d3cbc",
+          "date": "10 September 2026",
+          "summary": "Some visual improvements.",
+          "content": {
+            "added": [],
+            "fixed": [
+              "\"button.astro\" and \"linkButton.astro\" updated for better compatibility.",
+              "Fixed an issue where text colors were too similar to distinguish Primary from Secondary or Tertiary."
+            ],
+            "changed": [
+              "Home page hero section updated to look more professional."
+            ],
+            "removed": ["The prop named \"titleHiddenWhen\"."]
+          }
+        },
+        {
+          "commitID": "9582491",
+          "date": "10 September 2026",
+          "summary": "Officially made the project open source under the GNU Affero General Public License.",
+          "content": {
+            "added": ["GNU Affero General Public License"],
+            "fixed": [],
+            "changed": [],
+            "removed": ["cladue.md"]
+          }
+        },
+        {
+          "commitID": "74863bc",
+          "date": "10 September 2026",
+          "summary": "Started component layout.",
+          "content": {
+            "added": [
+              "Added component layout: \"button.astro\", \"expandButton.astro\", \"linkButton.astro\", \"materialSymbol\".",
+              "Added \"navBar.astro\" for navigation. On small screens, it appears as a small bar with an arrow that toggles the full navigation bar when clicked.",
+              "Configured global.css to the desired theme."
+            ],
+            "fixed": [],
+            "changed": [],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "44f5dc9",
+          "date": "10 September 2026",
+          "summary": "Let it begin.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": ["Renamed \"Layout\" to \"Body\"."],
+            "removed": []
+          }
+        }
+      ]
+    },
+    "tr": {
+      "progress": "Devam Ediyor",
+      "version": "V0.0.1",
+      "versionSummary": "Bir efsanenin tam başlangıcı.",
+      "date": "15 Eylül 2026",
+      "commits": [
+        {
+          "commitID": "67d1bc0",
+          "date": "14 Eylül 2026",
+          "summary": "Gezinme çubuğu ve altbilgi iyileştirmeleri.",
+          "content": {
+            "added": [
+              "Altbilgiye nihayet bağlantı grupları eklendi.",
+              "navBar açılır/kapanır animasyonu; mobildeki ok simgesini döndürür."
+            ],
+            "fixed": [
+              "\"customLink.astro\"",
+              "Altbilgi ve navBar üzerindeki bazı görsel hatalar."
+            ],
+            "changed": [
+              "\".gitignore\" dosyası daha iyi bir sürümle değiştirildi."
+            ],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "67d1bc0",
+          "date": "13 Eylül 2026",
+          "summary": "gitignore güncellendi.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": [
+              "\".gitignore\" dosyası daha iyi bir sürümle değiştirildi."
+            ],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "4db984e",
+          "date": "13 Eylül 2026",
+          "summary": "Hızlı düzeltme.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": ["\"README.md\" içerisindeki bazı rastgele metinler."],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "cc9fa9a",
+          "date": "13 Eylül 2026",
+          "summary": "Hızlı düzeltme.",
+          "content": {
+            "added": [],
+            "fixed": [
+              "README'nin portföyü ziyaret etmeye çalışırken kullanıcıları yanlış bağlantıya yönlendirmesi düzeltildi."
+            ],
+            "changed": [],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "ef56c31",
+          "date": "13 Eylül 2026",
+          "summary": "README güncellemesi.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": [
+              "\"README.md\" genel Astro README'si yerine portföye özel olacak şekilde güncellendi."
+            ],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "ba92101",
+          "date": "13 Eylül 2026",
+          "summary": "Hızlı düzeltme.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": [
+              "404 sayfasının mobilde kendini ortalamaya çalışıp başarısız olması."
+            ],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "e1b913a",
+          "date": "13 Eylül 2026",
+          "summary": "404 geliştirmesi, izlenmeyen değişiklikler eklendi.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": ["\"404.astro\" sayfasının tamamı."],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "ca8d860",
+          "date": "13 Eylül 2026",
+          "summary": "404 sayfası geliştirmesi; izlenmeyen dosyalar buraya dahil edilmeyi unutulmuş.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": ["Bazı sınıf isimleri."],
+            "removed": ["\"empty.astro\""]
+          }
+        },
+        {
+          "commitID": "5ddd7db",
+          "date": "13 Eylül 2026",
+          "summary": "Hızlı düzeltme.",
+          "content": {
+            "added": [],
+            "fixed": [
+              "logo.png dosyasının altbilgi ve Biyografi bölümlerinde görünmemesine neden olan bir hata."
+            ],
+            "changed": [],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "1256965",
+          "date": "13 Eylül 2026",
+          "summary": "İzlenmeyen dosyalar commitle'endi.",
+          "content": {
+            "added": [
+              "\"biography.astro\" belirli dillere yerelleştirildi; şimdilik yalnızca Türkçe ve İngilizce destekleniyor."
+            ],
+            "fixed": [],
+            "changed": [],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "75b846e",
+          "date": "13 Eylül 2026",
+          "summary": "Dinamik yerelleştirme desteği eklendi ve Ana sayfa tamamlandı.",
+          "content": {
+            "added": [
+              "Dinamik yerelleştirme desteği için \"languageHandler.ts\" (daha fazla bilgi için dosyayı ve GitHub reposunu inceleyin).",
+              "Dizin yapısı: \"/locales/[languageCode].json\".",
+              "Hakkımda daha fazla bilgi göstermek için Ana sayfaya \"biography.astro\" eklendi."
+            ],
+            "fixed": ["Bazı görsel hatalar."],
+            "changed": [
+              "\"givenTitleData\" ve \"givenDescData\", \"givenTitleKey\" ve \"givenDescKey\" olarak değiştirildi."
+            ],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "886d384",
+          "date": "11 Eylül 2026",
+          "summary": "İzlenmeyen dosyalar eklendi (altbilginin aslında 13d2257 commit'inde yayınlanması gerekiyordu).",
+          "content": {
+            "added": ["Altbilgi (footer)"],
+            "fixed": [],
+            "changed": [],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "13d2257",
+          "date": "11 Eylül 2026",
+          "summary": "Altbilgi üzerinde çalışılmaya başlandı ve bazı div'ler main / footer olarak yeniden adlandırıldı...",
+          "content": {
+            "added": [],
+            "fixed": ["Metin renklendirmesi."],
+            "changed": [
+              "Ana kapsayıcı elemanı <div> yerine <main> olarak değiştirildi."
+            ],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "d9746a7",
+          "date": "11 Eylül 2026",
+          "summary": "Eksik SVG eklendi.",
+          "content": {
+            "added": [
+              "\"infoChip.astro\" için üzerine gelme (hover) animasyonu."
+            ],
+            "fixed": ["\"infSection.astro\""],
+            "changed": [],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "4797d0e",
+          "date": "11 Eylül 2026",
+          "summary": "Eksik SVG eklendi.",
+          "content": {
+            "added": ["TypeScript logosu için eksik SVG."],
+            "fixed": [],
+            "changed": [],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "d554058",
+          "date": "11 Eylül 2026",
+          "summary": "İzlenmeyen dosyalar repoya eklendi.",
+          "content": {
+            "added": [
+              "\"infoChip.astro\"",
+              "Ana sayfa eklemeleri: \"home/components\", \"hero.astro\", \"grid.astro\", \"infSection.astro\".",
+              "\"svgSymbol.astro\" adında yeni bir <svg> bileşeni; Material Symbols ile sınırlı kalmayıp kendi SVG'lerimizi aktarabilmemizi sağlar."
+            ],
+            "fixed": [],
+            "changed": [],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "3557093",
+          "date": "11 Eylül 2026",
+          "summary": "Hızlı düzeltme.",
+          "content": {
+            "added": [],
+            "fixed": ["Dosya adlandırmalarındaki yazım hataları."],
+            "changed": [],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "542b313",
+          "date": "11 Eylül 2026",
+          "summary": "404 sayfası: argo/küfür içeren kelime kaldırıldı.",
+          "content": {
+            "added": ["404 sayfasına bazı metinler."],
+            "fixed": [],
+            "changed": [],
+            "removed": ["404 sayfasındaki argo/küfürlü kelime."]
+          }
+        },
+        {
+          "commitID": "7dbc8e7",
+          "date": "11 Eylül 2026",
+          "summary": "Ana sayfa eklemeleri.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": [
+              "\"button.astro\" Material Icons destekleyecek şekilde güncellendi.",
+              "Gelecekteki SVG eklemeleri için \"givenSymbol\", \"givenMaterialSymbol\" olarak değiştirildi."
+            ],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "4aefaef",
+          "date": "10 Eylül 2026",
+          "summary": "Ana sayfadaki hero bölümü iyileştirmeleri.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": ["Hero bölümünde 1 satır."],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "81fd518",
+          "date": "10 Eylül 2026",
+          "summary": "Gezinme iyileştirmeleri.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": [
+              "Gezinme çubuğu, \"linkButton.astro\" ve body üzerinde birkaç stil."
+            ],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "337f11b",
+          "date": "10 Eylül 2026",
+          "summary": "Bazı görsel iyileştirmeler.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": [
+              "\"linkButton.astro\" içerisindeki bazı stiller değiştirildi."
+            ],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "33d3cbc",
+          "date": "10 Eylül 2026",
+          "summary": "Bazı görsel iyileştirmeler.",
+          "content": {
+            "added": [],
+            "fixed": [
+              "Daha iyi uyumluluk için \"button.astro\" ve \"linkButton.astro\" güncellendi.",
+              "Metin renklendirmesinin Birincil (Primary) ile İkincil (Secondary) veya Üçüncül (Tertiary) renkleri ayırt edemeyecek kadar yakın olması sorunu düzeltildi."
+            ],
+            "changed": [
+              "Ana sayfa hero bölümü daha profesyonel görünecek şekilde güncellendi."
+            ],
+            "removed": ["\"titleHiddenWhen\" adlı prop."]
+          }
+        },
+        {
+          "commitID": "9582491",
+          "date": "10 Eylül 2026",
+          "summary": "Proje GNU Affero General Public License lisansı altında resmi olarak açık kaynaklı hale getirildi.",
+          "content": {
+            "added": ["GNU Affero General Public License"],
+            "fixed": [],
+            "changed": [],
+            "removed": ["cladue.md"]
+          }
+        },
+        {
+          "commitID": "74863bc",
+          "date": "10 Eylül 2026",
+          "summary": "Bileşen düzenine başlandı.",
+          "content": {
+            "added": [
+              "Bileşen yapısı eklendi: \"button.astro\", \"expandButton.astro\", \"linkButton.astro\", \"materialSymbol\".",
+              "Gezinme için \"navBar.astro\" eklendi. Küçük ekranlarda üzerinde ok bulunan küçük bir çubuk olarak görünecek, tıklandığında tam gezinme çubuğu açılacaktır.",
+              "global.css istenen temaya göre yapılandırıldı."
+            ],
+            "fixed": [],
+            "changed": [],
+            "removed": []
+          }
+        },
+        {
+          "commitID": "44f5dc9",
+          "date": "10 Eylül 2026",
+          "summary": "Başlasın.",
+          "content": {
+            "added": [],
+            "fixed": [],
+            "changed": ["\"Layout\", \"Body\" olarak yeniden adlandırıldı."],
+            "removed": []
+          }
+        }
+      ]
+    }
+  }
+]

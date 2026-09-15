@@ -1,0 +1,41 @@
+---
+interface Props {
+    givenLocationFrom: "horizontal" | "vertical";
+    givenLocation: "start" | "center" | "end";
+
+    givenID: string;
+    givenTitle: string;
+    givenTitleKey: string;
+}
+const { givenLocationFrom, givenLocation, givenID, givenTitle, givenTitleKey } =
+    Astro.props;
+
+// validate button rounded
+const borderRadiusMap = {
+    horizontal: {
+        start: "rounded-xl rounded-l-3xl",
+        center: "rounded-xl",
+        end: "rounded-xl rounded-r-3xl",
+    },
+    vertical: {
+        start: "rounded-xl rounded-t-3xl",
+        center: "rounded-xl",
+        end: "rounded-xl rounded-b-3xl",
+    },
+} as const;
+
+const borderRadius =
+    givenLocationFrom && givenLocation
+        ? borderRadiusMap[givenLocationFrom][givenLocation]
+        : "rounded-3xl";
+const validBorderRadius = `${borderRadius} hover:rounded-3xl`;
+---
+
+<div
+    id={givenID}
+    class={`flex flex-row items-center justify-center ${validBorderRadius} p-2 px-4 hover:bg-Accent border-2 border-Accent font-medium text-Accent hover:text-LT_Inverted dark:hover:text-DT_Inverted transition-all duration-250 ease-in-out`}
+>
+    <p data-i18n={givenTitleKey} class="text-nowrap">
+        {givenTitle}
+    </p>
+</div>

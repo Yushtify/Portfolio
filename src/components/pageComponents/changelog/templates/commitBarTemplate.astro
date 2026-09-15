@@ -1,0 +1,27 @@
+<!-- The bg-green-400 or border-green-400 will be replaced depending to the title of the commit such as ADDED, CHANGED or REMOVED for example the changed will be orange colored and removed will be red colored both will use tailwindCSS nontheless -->
+<template id="commitBarTemplate">
+    <div
+        id="commitBar_[Added / Removed...]"
+        class="flex flex-row items-start justify-start gap-2 w-full h-fit"
+    >
+        <!-- Title -->
+        <div
+            id="title"
+            class="flex flex-col items-center justify-center gap-2 rounded-3xl rounded-r-xl w-fit self-stretch bg-green-400 font-semibold text-LT_Inverted dark:text-DT_Inverted p-4 px-6"
+        >
+            <p class="uppercase">added</p>
+        </div>
+        <!-- Description -->
+        <div
+            id="desc"
+            class="flex flex-col items-start justify-center gap-2 rounded-3xl rounded-l-xl w-full self-stretch border-2 border-green-400 p-4 px-6"
+        >
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+                autem sit quae, ipsa nisi laudantium vitae! Nobis, delectus
+                veniam vel, cupiditate aut quaerat facere cum asperiores
+                architecto et repellat quae.
+            </p>
+        </div>
+    </div>
+</template>

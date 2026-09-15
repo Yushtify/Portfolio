@@ -1,10 +1,8 @@
 ---
 import MaterialSymbol from "../materialSymbol.astro";
 
-const currentPath = Astro.url.pathname;
-const isActive = (path: string) => currentPath === path;
-
 interface Props {
+    givenID: string;
     givenFunction: string;
     givenMaterialSymbol?: string;
 
@@ -16,6 +14,7 @@ interface Props {
 }
 
 const {
+    givenID,
     givenFunction,
     givenMaterialSymbol,
     givenLocationFrom,
@@ -47,13 +46,18 @@ const validBorderRadius = `${borderRadius} hover:rounded-3xl`;
 const textSize = "text-[min(6vw,1rem)]";
 const hasTitle = givenTitle ? "inline" : "hidden";
 const classMap = {
+    buttonWithoutTitle: `group flex flex-row items-center justify-center gap-4 p-2 ${validBorderRadius} w-fit h-full bg-L_Primary dark:bg-D_Primary hover:bg-Accent font-semibold text-LT_Primary dark:text-DT_Primary hover:text-LT_Inverted dark:hover:text-DT_Inverted transition-all duration-250 ease-in-out cursor-pointer capitalize`,
     button: `group flex flex-row-reverse lg:flex-row flex-stretch items-center justify-between lg:justify-center gap-4 p-4 max-lg:pl-6 lg:pr-6 ${validBorderRadius} min-w-fit w-full lg:w-fit h-full bg-L_Primary dark:bg-D_Primary hover:bg-Accent font-semibold text-LT_Primary dark:text-DT_Primary hover:text-LT_Inverted dark:hover:text-DT_Inverted transition-all duration-250 ease-in-out cursor-pointer capitalize`,
     titleClass: `${textSize} ${hasTitle}`,
 };
 ---
 
-<button onclick={givenFunction} class={classMap.button}>
-    <div class="flex flex-row p-4 rounded-3xl bg-L_BG dark:bg-D_BG group-hover:bg-Highlight transition-colors duration-250 ease-in-out">
+<button
+    id={givenID}
+    onclick={givenFunction}
+    class={givenTitle ? classMap.button : classMap.buttonWithoutTitle}
+>
+    <div class="flex flex-row p-2 md:p-4 rounded-3xl bg-L_BG dark:bg-D_BG group-hover:bg-Highlight transition-colors duration-250 ease-in-out">
         <MaterialSymbol
             givenMaterialSymbol={givenMaterialSymbol}
             givenMaterialSymbolSize={textSize}

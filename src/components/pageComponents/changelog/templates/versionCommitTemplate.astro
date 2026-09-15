@@ -1,0 +1,32 @@
+<template id="versionCommitTemplate">
+    <!-- versionCommit_[commitID] commitID will be replaced with the actual commit ID excluding the [] brackets they will be removed -->
+    <div
+        id="versionCommit_[commitID]"
+        class="flex flex-col items-start justify-center gap-6 p-4 rounded-3xl w-full h-fit bg-L_Primary dark:bg-D_Primary"
+    >
+        <!-- Title And Summary -->
+        <div class="relative flex flex-col items-start justify-start gap-2 p-2 pb-0 w-full h-fit">
+            <!-- Title-->
+            <div class="flex flex-row flex-wrap items-start justify-center gap-2 w-fit max-w-full font-semibold text-[min(6vw,0.9rem)] text-LT_Secondary dark:text-DT_Secondary uppercase">
+                <p>commit -</p>
+                <a
+                    id="commitID"
+                    class="hover:text-Accent underline underline-offset-2"
+                    href="https://github.com/Yushtify/Portfolio/commit/CommitID"
+                >
+                    CommitID
+                </a>
+                <p id="commitDate">- CommitDate</p>
+            </div>
+            <p id="commitSummary" class="text-[min(6vw,1.1rem)]">
+                Commit Summary.
+            </p>
+        </div>
+
+        <!-- Commited Changes -->
+        <div
+            id="committedChangesContainer"
+            class="flex flex-col items-items-start justify-start gap-4 p-6 rounded-3xl rounded-t-xl w-full h-fit bg-L_BG dark:bg-D_BG"
+        ></div>
+    </div>
+</template>

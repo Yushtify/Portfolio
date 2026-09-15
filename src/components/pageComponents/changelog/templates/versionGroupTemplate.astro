@@ -1,0 +1,82 @@
+---
+import MaterialSymbol from "../../../materialSymbol.astro";
+
+import Button from "../../../buttons/button.astro";
+import SimpleChip from "../../../cards/simpleChip.astro";
+import SimpleSymbolLink from "../../../simpleSymbolLink.astro";
+---
+
+<!-- versionGroup_Version The id will be depending to the version number such as versionGroup_V0-0-1 or versionGroup_V0-0-2 -->
+
+<template id="versionGroup_Template">
+    <div
+        id="versionGroup_Version"
+        class="flex flex-col items-start justify-center pl-6 gap-6 w-full h-fit border-l-2 border-LB_Primary dark:border-DB_Primary"
+    >
+        <!-- Title Area -->
+        <div class="flex flex-col items-start justify-start gap-4 w-full h-fit">
+            <div class="flex flex-row items-center justify-start gap-4 w-full h-fit">
+                <div class="flex flex-col items-items-start justify-start w-full h-fit gap-2">
+                    <p class="flex flex-row flex-wrap items-end justify-start w-full h-fit gap-2 font-semibold text-[min(10vw,1.5rem)] uppercase">
+                        <span id="versionNumber">V[Version Number]</span>
+                        <span id="versionDate">- Version Date</span>
+                    </p>
+                    <p
+                        id="versionSummary"
+                        class="text-LT_Secondary dark:text-DT_Secondary"
+                    >
+                        Version Summary.
+                    </p>
+                </div>
+
+                <div
+                    id="versionLinks"
+                    class="flex flex-row items-center justify-center gap-2"
+                >
+                    <SimpleSymbolLink
+                        givenID="commitLink"
+                        givenHref="https://github.com/yushtify"
+                        givenSvgSymbol="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385c.6.105.825-.255.825-.57c0-.285-.015-1.23-.015-2.235c-3.015.555-3.795-.735-4.035-1.41c-.135-.345-.72-1.41-1.23-1.695c-.42-.225-1.02-.78-.015-.795c.945-.015 1.62.87 1.845 1.23c1.08 1.815 2.805 1.305 3.495.99c.105-.78.42-1.305.765-1.605c-2.67-.3-5.46-1.335-5.46-5.925c0-1.305.465-2.385 1.23-3.225c-.12-.3-.54-1.53.12-3.18c0 0 1.005-.315 3.3 1.23c.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23c.66 1.65.24 2.88.12 3.18c.765.84 1.23 1.905 1.23 3.225c0 4.605-2.805 5.625-5.475 5.925c.435.375.81 1.095.81 2.22c0 1.605-.015 2.895-.015 3.3c0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12"
+                        givenSvgSymbolSize="1.2rem"
+                    />
+                </div>
+                <Button
+                    givenID="toggleVersionGroup_Button"
+                    givenFunction=""
+                    givenMaterialSymbol="keyboard_arrow_up"
+                />
+            </div>
+
+            <!-- Simple Chips -->
+            <div class="flex flex-row items-start justify-start gap-2 w-full overflow-x-scroll">
+                <SimpleChip
+                    givenLocationFrom="horizontal"
+                    givenLocation="start"
+                    givenID="progressChip"
+                    givenTitle="In Progress"
+                    givenTitleKey="updates.prefixChips.inProgress"
+                />
+                <SimpleChip
+                    givenLocationFrom="horizontal"
+                    givenLocation="center"
+                    givenID="totalCommits"
+                    givenTitle="[Dynamic Commit Count] Commits"
+                    givenTitleKey=""
+                />
+                <SimpleChip
+                    givenLocationFrom="horizontal"
+                    givenLocation="end"
+                    givenID="versionAuthor"
+                    givenTitle="by Yushtify"
+                    givenTitleKey=""
+                />
+            </div>
+        </div>
+        <div
+            id="commitContainer"
+            class="relative flex flex-col items-start justify-start gap-4 w-full h-fit"
+        >
+            <slot />
+        </div>
+    </div>
+</template>

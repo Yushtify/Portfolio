@@ -1,0 +1,48 @@
+---
+import MaterialSymbol from "../../materialSymbol.astro";
+
+import InfoChip from "../../cards/infoChip.astro";
+---
+
+<div class="flex flex-col items-start justify-center gap-8 px-0 md:px-4 w-full h-fit">
+    <!-- Hero Title -->
+    <div class="flex flex-col items-start justify-center gap-2 w-full h-fit">
+        <div class="flex flex-row items-center justify-center w-fit h-fit gap-2">
+            <MaterialSymbol
+                givenMaterialSymbol="deployed_code_update"
+                givenMaterialSymbolSize="text-[min(10vw,2rem)]"
+            />
+            <p class="font-bold text-[min(10vw,2rem)] capitalize">Updates</p>
+        </div>
+        <p class="text-LT_Secondary dark:text-DT_Secondary">
+            updates is a page where you can see all the changes made to this
+            project.
+        </p>
+    </div>
+
+    <!-- info container -->
+    <div class="grid grid-cols-1 md:flex md:flex-row items-start justify-center gap-2 w-full md:w-fit max-w-full h-fit">
+        <div class="flex flex-row items-center justify-center w-full h-fit gap-2">
+            <!-- Total updates will not include every commit just only the versions not the commits like v0-0-1.json or v0-0-2.json not the commit logs inside them this will be dynamically updated by the TS -->
+            <InfoChip
+                givenLocationFrom="horizontal"
+                givenLocation="start"
+                givenMaterialSymbol="update"
+                givenTitle="Total Updates"
+                givenTitleKey="updates.hero.infoContainer.totalUpdates"
+                givenDesc="Loading"
+                givenDescKey=""
+            />
+            <!-- Total commits will include every commit inside the versions not just the versions themselves this will be dynamically updated by the TS -->
+            <InfoChip
+                givenLocationFrom="horizontal"
+                givenLocation="end"
+                givenMaterialSymbol="commit"
+                givenTitle="Total Commits"
+                givenTitleKey="updates.hero.infoContainer.totalCommits"
+                givenDesc="Loading"
+                givenDescKey=""
+            />
+        </div>
+    </div>
+</div>
