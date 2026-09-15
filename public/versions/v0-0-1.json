@@ -352,7 +352,19 @@
       "version": "V0.0.1",
       "versionSummary": "Bir efsanenin tam başlangıcı.",
       "date": "15 Eylül 2026",
-      "commits": [
+      "commits": [{
+        "commitID": "",
+        "date": "15 Eylül 2026",
+        "summary": "Bu güncelleme \"/updates\" sayfasına odaklanmaktadır..",
+        "content": {
+          "added": [
+            "Portfolyo için commit geçmişinin dinamik olarak yüklendiği \"/updates\" sayfası."
+          ],
+          "fixed": [],
+          "changed": ["Alt bilgi (footer) iyileştirildi."],
+          "removed": []
+        }
+      }
         {
           "commitID": "67d1bc0",
           "date": "14 Eylül 2026",
